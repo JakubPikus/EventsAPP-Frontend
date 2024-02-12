@@ -58,7 +58,7 @@ function Event({ props, role }) {
             <div
               className={` h-[95px] w-[75px] rounded-[15px] border border-gray-500 bg-cover    bg-center bg-no-repeat `}
               style={{
-                backgroundImage: `url(${ips_config.BACKEND}/media/${props?.image})`,
+                backgroundImage: `url(${ips_config.BACKEND}/media/${props?.image_thumbnail})`,
               }}
             ></div>
           </div>

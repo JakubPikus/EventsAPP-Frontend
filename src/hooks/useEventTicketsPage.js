@@ -133,7 +133,8 @@ function useEventTicketsPage() {
     if (
       !Object.keys(obj_ticket.validated).some(
         (validator) => obj_ticket.validated[validator] == false
-      )
+      ) &&
+      quantityTickets < 10
     ) {
       addToCart(category, obj_ticket, setCart);
       removeFromPreCart(category, ticket_index, setPreCart);
@@ -406,9 +407,11 @@ function useEventTicketsPage() {
             <button
               type="submit"
               value="Submit"
-              disabled={Object.keys(data.validated).some(
-                (validator) => data.validated[validator] == false
-              )}
+              disabled={
+                Object.keys(data.validated).some(
+                  (validator) => data.validated[validator] == false
+                ) || quantityTickets >= 10
+              }
               className={`h-7 w-full px-2 xl:w-36 rounded-lg bg-gradient-to-br from-green-400 via-green-500 to-green-600 py-1 text-center text-xs font-medium text-white shadow-lg shadow-green-500/10 focus:outline-none focus:ring-2 focus:ring-green-300 xl:h-9 xl:text-sm disabled:cursor-not-allowed disabled:from-gray-500 disabled:via-gray-600 disabled:to-gray-700 disabled:text-black disabled:shadow-none`}
             >
               Dodaj do koszyka

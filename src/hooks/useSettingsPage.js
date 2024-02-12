@@ -1901,10 +1901,10 @@ function useSettingsPage() {
 
                 {user.facebook.social_id !== null ? (
                   <div className="flex flex-row items-end space-x-2 pt-1">
-                    {/* <img
+                    <img
                       src={`${ips_config.BACKEND}/media/${user.facebook.image}`}
                       className={`h-7 w-7 rounded-lg`}
-                    ></img> */}
+                    ></img>
 
                     {/* Pod koniec września 2023 roku Facebook API został zaktualizowany i dostep do zdjęć użytkowników został ograniczony tylko dla zweryfikowanych developerów */}
                     <span className="h-fit font-mukta text-[12px] text-white">

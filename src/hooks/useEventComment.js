@@ -274,10 +274,21 @@ function useEventComment() {
                   : "h-12 w-12 lg:h-16 lg:w-16"
               } flex`}
             >
-              <Link to={`/user/${comment.author}`} className="flex w-auto">
+              <Link
+                to={`/user/${comment.author}`}
+                className={`flex shrink-0 ${
+                  hideComments[comment.id] == true
+                    ? "h-8 w-8"
+                    : "h-12 w-12 lg:h-16 lg:w-16"
+                }`}
+              >
                 <img
                   src={`${ips_config.BACKEND}/media/${comment.author_image}`}
-                  className="rounded-full"
+                  className={`rounded-full shrink-0 ${
+                    hideComments[comment.id] == true
+                      ? "h-8 w-8"
+                      : "h-12 w-12 lg:h-16 lg:w-16"
+                  }`}
                 ></img>
               </Link>
             </div>
