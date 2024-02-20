@@ -267,6 +267,7 @@ const dataReducer = (state = initialState, action) => {
     case DATA_HOMESCREEN_SUCCESS:
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -276,69 +277,6 @@ const dataReducer = (state = initialState, action) => {
         events_homescreen: {
           data: action.data,
           meta: action.meta,
-        },
-        events_list: {
-          data: null,
-          meta: null,
-        },
-        find_friends: null,
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        events_random: null,
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_tickets: null,
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-        events_via_calendar: null,
-        settings: null,
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        event_tickets: null,
-        series: null,
-        events_map: {
-          province: null,
-          county: null,
         },
       };
     case DATA_HOMESCREEN_FAIL:
@@ -425,6 +363,7 @@ const dataReducer = (state = initialState, action) => {
     case EVENT_LIST_SUCCESS:
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -435,68 +374,6 @@ const dataReducer = (state = initialState, action) => {
           data: action.data,
           meta: action.meta,
           value_not_found: action.value_not_found,
-        },
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        find_friends: null,
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_tickets: null,
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        settings: null,
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-        events_via_calendar: null,
-        events_random: null,
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
         },
       };
     case EVENT_LIST_FAIL:
@@ -513,6 +390,7 @@ const dataReducer = (state = initialState, action) => {
     case EVENT_SUCCESS:
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -522,69 +400,6 @@ const dataReducer = (state = initialState, action) => {
         event: {
           data: action.data,
         },
-        events_list: {
-          data: null,
-          meta: null,
-          value_not_found: null,
-        },
-        events_random: null,
-        find_friends: null,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        series: null,
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        new_event: {
-          slug: null,
-          uuid: null,
-        },
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_tickets: null,
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        settings: null,
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-        events_via_calendar: null,
       };
     case EVENT_FAIL:
       return {
@@ -788,6 +603,7 @@ const dataReducer = (state = initialState, action) => {
     case EVENT_USER_SUCCESS:
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -802,60 +618,6 @@ const dataReducer = (state = initialState, action) => {
             value_not_found: action.value_not_found,
           },
         },
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_tickets: null,
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        settings: null,
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        find_friends: null,
-        events_via_calendar: null,
-        events_random: null,
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        series: null,
       };
 
     case EVENT_USER_FAIL:
@@ -1873,6 +1635,7 @@ const dataReducer = (state = initialState, action) => {
     case SERIES_SUCCESS:
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -1880,68 +1643,6 @@ const dataReducer = (state = initialState, action) => {
           code: action.code,
         },
         series: action.data,
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        find_friends: null,
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        events_random: null,
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_tickets: null,
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        settings: null,
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-        events_via_calendar: null,
       };
 
     case SERIES_FAIL:
@@ -2106,6 +1807,7 @@ const dataReducer = (state = initialState, action) => {
       }
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -2116,73 +1818,6 @@ const dataReducer = (state = initialState, action) => {
           events_no_series: action.events_no_series,
           events_with_series: action.events_with_series,
           alphabet_list: alphabet,
-        },
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        settings: null,
-        events_via_tickets: null,
-        events_list: {
-          data: null,
-          meta: null,
-          value_not_found: null,
-        },
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-        events_random: null,
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        find_friends: null,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        series: null,
-        events_via_calendar: null,
-        new_event: {
-          slug: null,
-          uuid: null,
-        },
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
         },
       };
 
@@ -2561,6 +2196,7 @@ const dataReducer = (state = initialState, action) => {
     case EVENT_VIA_CALENDAR_SUCCESS:
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -2568,72 +2204,6 @@ const dataReducer = (state = initialState, action) => {
           code: action.code,
         },
         events_via_calendar: action.data,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        events_list: {
-          data: null,
-          meta: null,
-        },
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        find_friends: null,
-        settings: null,
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        events_random: null,
-        events_via_tickets: null,
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        series: null,
       };
 
     case EVENT_VIA_CALENDAR_FAIL:
@@ -2684,6 +2254,7 @@ const dataReducer = (state = initialState, action) => {
 
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -2691,73 +2262,6 @@ const dataReducer = (state = initialState, action) => {
           code: code,
         },
         events_random: filtred_events_random,
-        events_via_calendar: null,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        events_list: {
-          data: null,
-          meta: null,
-        },
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        settings: null,
-        find_friends: null,
-        events_via_tickets: null,
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        series: null,
       };
 
     case EVENT_RANDOM_FAIL:
@@ -2821,6 +2325,7 @@ const dataReducer = (state = initialState, action) => {
     case EVENT_PROVINCE_MAP_SUCCESS:
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -2831,70 +2336,6 @@ const dataReducer = (state = initialState, action) => {
           province: action.data,
           county: null,
         },
-        events_random: null,
-        events_via_calendar: null,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        event_tickets: null,
-        find_friends: null,
-        settings: null,
-        events_list: {
-          data: null,
-          meta: null,
-        },
-
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_tickets: null,
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        series: null,
       };
 
     case EVENT_PROVINCE_MAP_FAIL:
@@ -2937,6 +2378,7 @@ const dataReducer = (state = initialState, action) => {
     case FIND_FRIENDS_SUCCESS:
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -2948,73 +2390,6 @@ const dataReducer = (state = initialState, action) => {
           data: action.data,
           count: action.count,
         },
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        events_random: null,
-        events_via_calendar: null,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        events_list: {
-          data: null,
-          meta: null,
-        },
-
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        settings: null,
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_tickets: null,
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        series: null,
       };
 
     case FIND_FRIENDS_FAIL:
@@ -3121,6 +2496,7 @@ const dataReducer = (state = initialState, action) => {
       }
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -3132,64 +2508,6 @@ const dataReducer = (state = initialState, action) => {
           ...state.events_via_badges,
           events: action.events,
           alphabet_list: alphabet_badges,
-        },
-
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        events_list: {
-          data: null,
-          meta: null,
-          value_not_found: null,
-        },
-        events_via_tickets: null,
-        events_random: null,
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        find_friends: null,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        series: null,
-        events_via_calendar: null,
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-        settings: null,
-        new_event: {
-          slug: null,
-          uuid: null,
-        },
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
         },
       };
 
@@ -3596,6 +2914,7 @@ const dataReducer = (state = initialState, action) => {
     case USER_BADGES_SUCCESS:
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -3608,66 +2927,6 @@ const dataReducer = (state = initialState, action) => {
           activated_badges: action.activated_badges,
           used_codes: [],
         },
-
-        find_friends: null,
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        events_random: null,
-        events_via_calendar: null,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        events_list: {
-          data: null,
-          meta: null,
-        },
-
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        settings: null,
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_tickets: null,
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        series: null,
       };
     case USER_BADGES_FAIL:
       return {
@@ -3995,6 +3254,7 @@ const dataReducer = (state = initialState, action) => {
     case USER_VALIDATORS_SUCCESS:
       return {
         ...state,
+        ...initialState,
         handler: {
           success: action.success,
           error: "",
@@ -4005,75 +3265,6 @@ const dataReducer = (state = initialState, action) => {
           ...state.settings,
           ip_validators: action.ip_validators,
         },
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-
-        find_friends: null,
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        events_random: null,
-        events_via_calendar: null,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        events_list: {
-          data: null,
-          meta: null,
-        },
-
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-        events_via_tickets: null,
-
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        series: null,
       };
 
     case USER_VALIDATORS_FAIL:
@@ -4732,76 +3923,7 @@ const dataReducer = (state = initialState, action) => {
     case DATA_RESET:
       return {
         ...state,
-        settings: null,
-        user_badges: {
-          created_badges: null,
-          activated_badges: null,
-          new_badge: null,
-          not_valid_code_badge: {
-            badge: null,
-            modal_option_frontend: null,
-          },
-          used_codes: null,
-        },
-
-        find_friends: null,
-        events_map: {
-          province: null,
-          county: null,
-        },
-        event_tickets: null,
-        events_random: null,
-        events_via_calendar: null,
-        events_homescreen: {
-          data: null,
-          meta: null,
-        },
-        events_list: {
-          data: null,
-          meta: null,
-        },
-
-        event: {
-          data: null,
-          comments: {
-            data: null,
-            meta: null,
-          },
-          participants: null,
-          is_rejected: null,
-        },
-        events_via_badges: {
-          events: null,
-          alphabet_list: null,
-          badge_codes_locked: {
-            locked: null,
-            used: null,
-            append: null,
-          },
-          badge_codes_deleted: {
-            list_ids: null,
-            deleted: null,
-            used: null,
-          },
-          is: null,
-        },
-        events_via_tickets: null,
-        events_via_series: {
-          events_no_series: null,
-          events_with_series: null,
-          alphabet_list: null,
-        },
-
-        user: {
-          data: null,
-          events: {
-            data: null,
-            meta: null,
-            value_not_found: null,
-          },
-          not_valid_request_action: null,
-        },
-        series: null,
+        ...initialState,
       };
 
     case EVENT_TICKETS_SUCCESS:
@@ -5006,6 +4128,7 @@ const dataReducer = (state = initialState, action) => {
       if (action.mode == "start") {
         return {
           ...state,
+          ...initialState,
           handler: {
             success: action.success,
             error: "",
@@ -5038,68 +4161,6 @@ const dataReducer = (state = initialState, action) => {
               },
             },
           },
-          user: {
-            data: null,
-            events: {
-              data: null,
-              meta: null,
-              value_not_found: null,
-            },
-            not_valid_request_action: null,
-          },
-          events_homescreen: {
-            data: null,
-            meta: null,
-          },
-          events_via_badges: {
-            events: null,
-            alphabet_list: null,
-            badge_codes_locked: {
-              locked: null,
-              used: null,
-              append: null,
-            },
-            badge_codes_deleted: {
-              list_ids: null,
-              deleted: null,
-              used: null,
-            },
-            is: null,
-          },
-          events_via_series: {
-            events_no_series: null,
-            events_with_series: null,
-            alphabet_list: null,
-          },
-          settings: null,
-          user_badges: {
-            created_badges: null,
-            activated_badges: null,
-            new_badge: null,
-            not_valid_code_badge: {
-              badge: null,
-              modal_option_frontend: null,
-            },
-            used_codes: null,
-          },
-          events_map: {
-            province: null,
-            county: null,
-          },
-          event_tickets: null,
-          find_friends: null,
-          events_via_calendar: null,
-          events_random: null,
-          event: {
-            data: null,
-            comments: {
-              data: null,
-              meta: null,
-            },
-            participants: null,
-            is_rejected: null,
-          },
-          series: null,
         };
       } else {
         let temp_calendar = state.events_via_tickets.calendar;
