@@ -144,9 +144,6 @@ function EventBrowser({
         );
 
         if (name[0].name == locationInput.province) {
-          // document
-          //   .getElementById("distanceSearchDiv")
-          //   .classList.remove("hidden");
           setShowDistance(true);
           document.getElementById("cityWarning").classList.add("invisible");
           setValidated(true);

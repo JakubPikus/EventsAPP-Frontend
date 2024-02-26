@@ -49,21 +49,21 @@ function Event({ props, role }) {
     } else {
       return (
         <div
-          className={`${
+          className={`flex ${
             role === "Helper" ? "cursor-pointer bg-zinc-900 " : "bg-zinc-700 "
-          } flex h-32 w-full flex-row space-x-2 px-2 md:space-x-4`}
+          } h-32 w-full`}
           key={props.id}
         >
-          <div className="flex h-full w-1/3 items-center justify-center xl:justify-end">
-            <div
-              className={` h-[95px] w-[75px] rounded-[15px] border border-gray-500 bg-cover    bg-center bg-no-repeat `}
-              style={{
-                backgroundImage: `url(${ips_config.BACKEND}/media/${props?.image_thumbnail})`,
-              }}
-            ></div>
-          </div>
-          <div className="flex h-full w-2/3 flex-col py-3 px-1 md:px-1">
-            <div className="flex grow flex-col">
+          <div className="flex w-full pl-1 sm:pl-4">
+            <div className="flex h-full items-center justify-center pr-2 sm:pr-8 xl:pr-2">
+              <div
+                className={`flex pl-4 h-[70px] w-[55px] sm:h-[95px] sm:w-[75px] rounded-[15px] border border-gray-500 bg-cover bg-center bg-no-repeat `}
+                style={{
+                  backgroundImage: `url(${ips_config.BACKEND}/media/${props?.image_thumbnail})`,
+                }}
+              ></div>
+            </div>
+            <div className="flex h-full w-2/3 md:grow flex-col py-3">
               <span
                 className={`break-anywhere text-md h-auto font-mukta text-[10px] italic  ${
                   role === "Helper" ? "text-gray-600" : "text-gray-400"
@@ -71,11 +71,11 @@ function Event({ props, role }) {
               >
                 {props?.category}
               </span>
-              <span className="break-anywhere h-[40px] w-auto truncate text-start font-mukta text-lg text-gray-100">
+              <span className="break-anywhere h-[40px] truncate w-3/4 md:w-11/12 text-start font-mukta text-xs sm:text-lg text-gray-100 pb-8">
                 {props?.title}
               </span>
-              <div className="flex h-full w-full flex-row items-center justify-between space-x-2 pt-2 pr-4 sm:pt-1  lg:pr-8 xl:pr-4">
-                <div className="flex h-full flex-col items-center space-y-1 pt-2 sm:pt-0">
+              <div className="flex h-full flex-row grow">
+                <div className="flex h-full w-1/3 flex-col items-center space-y-1 ">
                   <CalendarIcon className="h-4 w-4 shrink-0 text-gray-100 md:h-5 md:w-5 " />
                   <div className="flex h-auto w-auto flex-col items-center">
                     <span className="text-center font-mukta text-[8px] text-gray-200 sm:text-[11px] ">
@@ -87,7 +87,7 @@ function Event({ props, role }) {
                   </div>
                 </div>
 
-                <div className="flex h-full flex-col items-center space-y-1 pt-2 sm:pt-0">
+                <div className="flex h-full grow flex-col items-center space-y-1 ">
                   <LocationMarkerIcon className="h-4 w-4 shrink-0 text-gray-100 md:h-5 md:w-5 " />
                   <div className="flex h-auto w-auto flex-col items-center">
                     <span className="text-center font-mukta text-[8px] text-gray-200 sm:text-[11px] ">
@@ -99,7 +99,7 @@ function Event({ props, role }) {
                   </div>
                 </div>
 
-                <div className="flex h-full flex-col items-center space-y-1 pt-2 sm:pt-0">
+                <div className="flex h-full w-1/3 flex-col items-center space-y-1">
                   <UserGroupIcon className="h-4 w-4 shrink-0 text-gray-100 md:h-5 md:w-5 " />
                   <span className="text-center font-mukta text-[8px] text-gray-200 sm:text-[11px] ">
                     {`${props?.num_reputation} osób`}

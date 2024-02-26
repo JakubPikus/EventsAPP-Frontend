@@ -1495,7 +1495,10 @@ const websocketsReducer = (state = initialState, action) => {
           code: action.code,
         },
         notifications: {
-          data: [action.data.notification, ...state.notifications.data],
+          data:
+            state.notifications?.data !== undefined
+              ? [action.data.notification, ...state.notifications.data]
+              : [action.data.notification],
           meta: {
             ...state.notifications.meta,
             new_count: state.notifications.meta.new_count + 1,

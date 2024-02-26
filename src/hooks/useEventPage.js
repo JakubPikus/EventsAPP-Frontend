@@ -287,22 +287,16 @@ function useEventPage() {
   function buttonActions(event, user) {
     if (event.user == user.username) {
       return (
-        <>
-          <TicketIcon
-            className={`h-7 w-7 cursor-pointer text-yellow-400`}
-          ></TicketIcon>
-
-          <TrashIcon
-            onClick={() => {
-              setOpenDelete({
-                status: true,
-                slug: event.slug,
-                uuid: event.uuid,
-              });
-            }}
-            className={`h-7 w-7 cursor-pointer text-red-400`}
-          ></TrashIcon>
-        </>
+        <TrashIcon
+          onClick={() => {
+            setOpenDelete({
+              status: true,
+              slug: event.slug,
+              uuid: event.uuid,
+            });
+          }}
+          className={`h-7 w-7 cursor-pointer text-red-400`}
+        ></TrashIcon>
       );
     } else if (event.verificated == "verificated") {
       return (

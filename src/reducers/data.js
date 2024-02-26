@@ -400,6 +400,7 @@ const dataReducer = (state = initialState, action) => {
         event: {
           data: action.data,
         },
+        categorys: state.categorys,
       };
     case EVENT_FAIL:
       return {
@@ -1643,6 +1644,7 @@ const dataReducer = (state = initialState, action) => {
           code: action.code,
         },
         series: action.data,
+        categorys: state.categorys,
       };
 
     case SERIES_FAIL:

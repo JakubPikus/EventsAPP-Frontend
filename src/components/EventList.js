@@ -363,6 +363,7 @@ function EventList({
                     {endProvider &&
                       events[activeCategoryList].map((event, index) => (
                         <div
+                          className="flex w-full"
                           key={event.id}
                           onClick={() => {
                             setActiveEvent({
@@ -385,11 +386,11 @@ function EventList({
                   checkLocalization.id !== user.city.id
                     ? "h-2/3 md:h-1/2"
                     : "h-full"
-                } w-full flex-row items-center justify-between gap-2 px-2 md:px-8 xl:px-0`}
+                } w-full flex-row items-center justify-between px-2 md:px-8 xl:px-0`}
                 onSubmit={handleLocationSubmit}
               >
                 <div className="flex flex-row items-center space-x-1 sm:space-x-2">
-                  <div className="flex flex-col gap-2 lg:flex-row">
+                  <div className="flex flex-col gap-2 md:flex-row">
                     <input
                       type="text"
                       list="provinceEventList"

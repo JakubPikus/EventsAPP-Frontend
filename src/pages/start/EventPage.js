@@ -575,7 +575,9 @@ function EventPage({
                                 </Link>
 
                                 <div className="flex w-full flex-row items-start justify-between pt-1 pr-2">
-                                  <div className={`flex flex-col items-start`}>
+                                  <div
+                                    className={`flex w-1/2 flex-col items-start`}
+                                  >
                                     <LocationMarkerIcon className="h-5 w-5 text-gray-300" />
                                     <span className="h-auto pt-1 font-mukta text-xs text-gray-200">
                                       {event.city}
@@ -585,19 +587,21 @@ function EventPage({
                                     </span>
                                   </div>
 
-                                  <div className="flex h-full flex-col items-center">
-                                    <UserGroupIcon className="h-5 w-5 text-gray-300" />
-                                    <span className="h-auto pt-1 font-mukta text-xs text-gray-200">
-                                      {event.num_reputation}
-                                    </span>
-                                  </div>
+                                  <div className="flex flex-row justify-between w-1/2">
+                                    <div className="flex h-full flex-col items-center">
+                                      <UserGroupIcon className="h-5 w-5 text-gray-300" />
+                                      <span className="h-auto pt-1 font-mukta text-xs text-gray-200">
+                                        {event.num_reputation}
+                                      </span>
+                                    </div>
 
-                                  <div className="flex h-auto w-auto items-start justify-center pl-3">
-                                    {eventActionSeries(
-                                      event,
-                                      user.username,
-                                      xcsrfToken
-                                    )}
+                                    <div className="flex h-auto w-auto items-start justify-center pl-3">
+                                      {eventActionSeries(
+                                        event,
+                                        user.username,
+                                        xcsrfToken
+                                      )}
+                                    </div>
                                   </div>
                                 </div>
                               </div>
