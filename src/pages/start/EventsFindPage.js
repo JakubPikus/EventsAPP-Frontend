@@ -171,7 +171,7 @@ function EventsFindPage({
         str = `<option class="text-black" value="Wszystko">Wszystko</option>`;
         for (var i = 0; i < cities.length; i++) {
           if (valueInput?.city == cities[i].name) {
-            str += `<option class="text-black" value="${cities[i].name}" > ${cities[i].name}</option>`;
+            str += `<option selected class="text-black" value="${cities[i].name}" > ${cities[i].name}</option>`;
           } else {
             str += `<option class="text-black" value="${cities[i].name}" > ${cities[i].name}</option>`;
           }
