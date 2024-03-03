@@ -284,7 +284,7 @@ function useEventComment() {
               >
                 <img
                   src={`${ips_config.BACKEND}/media/${comment.author_image}`}
-                  className={`rounded-full shrink-0 ${
+                  className={`rounded-full object-cover shrink-0 ${
                     hideComments[comment.id] == true
                       ? "h-8 w-8"
                       : "h-12 w-12 lg:h-16 lg:w-16"
@@ -557,7 +557,7 @@ function useEventComment() {
                   <div className={`flex h-16 w-16`}>
                     <img
                       src={`${ips_config.BACKEND}/media/${openReport.comment.author_image}`}
-                      className="rounded-full"
+                      className="rounded-full object-cover"
                     ></img>
                   </div>
                 </div>
@@ -683,7 +683,7 @@ function useEventComment() {
                   <div className={`flex h-16 w-16`}>
                     <img
                       src={`${ips_config.BACKEND}/media/${openDelete.comment.author_image}`}
-                      className="rounded-full"
+                      className="rounded-full object-cover"
                     ></img>
                   </div>
                 </div>
@@ -869,7 +869,7 @@ function useEventComment() {
             <Link to={`/user/${user.username}`} className="flex h-16 w-16">
               <img
                 src={`${ips_config.BACKEND}${user.image_thumbnail}`}
-                className="h-16 w-16 rounded-full"
+                className="h-16 w-16 rounded-full object-cover"
               ></img>
             </Link>
           </div>

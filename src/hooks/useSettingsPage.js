@@ -822,25 +822,26 @@ function useSettingsPage() {
             className="flex w-1/2 flex-col space-y-4"
             onSubmit={handleBankNumberPasswordSubmit}
           >
-            {settings.amount_awaiting_refunding !== null && (
-              <div className="flex flex-col space-y-3 w-full h-auto">
-                <span className="h-auto font-mukta text-2xl text-center text-red-500">
-                  ! UWAGA !
-                </span>
+            {settings.amount_awaiting_refunding !== null &&
+              user.pinned_bank == false && (
+                <div className="flex flex-col space-y-3 w-full h-auto">
+                  <span className="h-auto font-mukta text-2xl text-center text-red-500">
+                    ! UWAGA !
+                  </span>
 
-                <span className="h-auto font-mukta text-[16px] text-center text-red-300">
-                  Pewne wydarzenia na które zakupiłeś bilety zostały anulowane.
-                  Aby uzyskać zwrot swojej kwoty, musisz podłączyć konto
-                  bankowego do swojego profilu. Pamiętaj, że w momencie gdy
-                  administrator otworzy bramkę z płatnością, zmiana numeru konta
-                  bankowego będzie niemożliwa, aż do jej zamknięcia.
-                </span>
+                  <span className="h-auto font-mukta text-[16px] text-center text-red-300">
+                    Pewne wydarzenia na które zakupiłeś bilety zostały
+                    anulowane. Aby uzyskać zwrot swojej kwoty, musisz podłączyć
+                    konto bankowego do swojego profilu. Pamiętaj, że w momencie
+                    gdy administrator otworzy bramkę z płatnością, zmiana numeru
+                    konta bankowego będzie niemożliwa, aż do jej zamknięcia.
+                  </span>
 
-                <span className="h-auto font-mukta text-[16px] text-center text-red-300">
-                  {`Oczekująca kwota: ${settings.amount_awaiting_refunding} zł`}
-                </span>
-              </div>
-            )}
+                  <span className="h-auto font-mukta text-[16px] text-center text-red-300">
+                    {`Oczekująca kwota: ${settings.amount_awaiting_refunding} zł`}
+                  </span>
+                </div>
+              )}
             {user.pinned_bank == true ? (
               <div className="flex w-full flex-col space-y-1">
                 <label

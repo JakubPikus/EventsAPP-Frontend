@@ -110,7 +110,7 @@ function Chat({ position, data, textMessage, setTextMessage }) {
         <div className="flex w-full flex-row items-end space-x-2 ">
           <img
             src={`${ips_config.BACKEND}${image_thumbnail}`}
-            className={`h-8 w-8 rounded-full`}
+            className={`h-8 w-8 rounded-full object-cover`}
           ></img>
           <div className="break-anywhere h-min-12 flex h-auto max-w-40  items-center justify-center rounded-xl bg-neutral-700 p-2">
             <span className={`text-md h-auto font-mukta text-gray-200`}>
@@ -270,7 +270,7 @@ function Chat({ position, data, textMessage, setTextMessage }) {
           >
             <img
               src={`${ips_config.BACKEND}${data.image_thumbnail}`}
-              className={`h-8 w-8 rounded-full`}
+              className={`h-8 w-8 rounded-full object-cover`}
             ></img>
           </Link>
 

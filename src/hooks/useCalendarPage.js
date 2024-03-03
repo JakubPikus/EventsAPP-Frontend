@@ -325,6 +325,7 @@ function useCalendarPage() {
             </div>
           ))}
         </div>
+
         {/* PIERWSZA LINIA Z PUSTYMI DNIAMI + RESZTA */}
         <div
           className="flex h-full w-full flex-row justify-between divide-x-2 divide-blue-400"
@@ -337,6 +338,7 @@ function useCalendarPage() {
             renderDay(index + 1, events[index + 1], index + calendar.first_day)
           )}
         </div>
+
         {/* DRUGA, TRZECIA I CZWARTA LINIE ZAWSZE SĄ PEŁNE NAWET W LUTYM (2021) */}
         {Array.from({ length: 3 }, (_, multi) => (
           <div

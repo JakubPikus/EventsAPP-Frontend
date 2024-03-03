@@ -422,7 +422,7 @@ function useEventsRandomPage() {
                 <Link to={`/user/${event.user}`} className="flex h-12 w-12">
                   <img
                     src={`${ips_config.BACKEND}/media/${event.user_image}`}
-                    className="12 w-12 rounded-full transition ease-in-out group-hover:scale-125"
+                    className="12 w-12 rounded-full object-cover transition ease-in-out group-hover:scale-125"
                   ></img>
                 </Link>
               </div>

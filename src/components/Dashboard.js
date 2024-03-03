@@ -98,7 +98,7 @@ function Dashboard({ children }) {
                     src={`${ips_config.BACKEND}${user.image_thumbnail}`}
                     className={`${
                       menuStatus ? "h-5 w-5 sm:h-8 sm:w-8" : "h-6 w-6"
-                    } rounded-full transition ease-in-out group-hover:scale-125 `}
+                    } rounded-full object-cover transition ease-in-out group-hover:scale-125 `}
                   ></img>
                 </Link>
 

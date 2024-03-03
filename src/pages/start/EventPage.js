@@ -355,7 +355,7 @@ function EventPage({
                         >
                           <img
                             src={`${ips_config.BACKEND}/media/${activeEvent.user_image}`}
-                            className="h-12 w-12 shrink-0 rounded-full  xl:h-16 xl:w-16"
+                            className="h-12 w-12 shrink-0 object-cover rounded-full  xl:h-16 xl:w-16"
                           ></img>
                         </Link>
                       </div>

@@ -2224,18 +2224,14 @@ const dataReducer = (state = initialState, action) => {
       let code;
 
       if (state.events_random == null) {
-        // PIERWSZE POBRANIE
         filtred_events_random = action.data;
 
-        // GDY ZA PIERWSZYM JUZ RAZEM BEDZIE MNIEJ NIZ 10 EVENTOW, TO ZNACZY ZE TO SĄ WSZYSTKIE
         if (action.data.length < 10) {
           code = "660";
         } else {
           code = action.code;
         }
       } else {
-        // KOLEJNE POBRANIE GDY W REDUCERZE POZOSTAJĄ 2 OSTATNIE EVENTY I POBIERAMY NOWE
-
         let new_data = action.data.filter(
           (obj) =>
             obj.id !== state.events_random[0].id &&
@@ -2243,15 +2239,10 @@ const dataReducer = (state = initialState, action) => {
         );
         filtred_events_random = [...state.events_random, ...new_data];
         if (new_data.length < 8) {
-          // GDY PO ODFILTROWANIU OKAŻE SIĘ ŻE JEST MNIEJ NIŻ 10-2=8 EVENTÓW, CZYLI WSZYSTKIE Z BAZY
-          // LUB
-          // (10% SZANS) GDY AKURAT POBIERZEMY OSTATNIE 8 EVENTÓW + 2 POWTARZAJĄCE SIĘ, TO NASTĄPI 1 DODATKOWY FETCH I ZNÓW WEJDZIE W (new_data.length < 8)
           code = "660";
         } else {
           code = action.code;
         }
-
-        // PRZEKAZAĆ INFO DO PAGE ŻE new_data DŁUGOŚĆ TO 0 I NIE ZAPĘTLAĆ DISPATCHA
       }
 
       return {

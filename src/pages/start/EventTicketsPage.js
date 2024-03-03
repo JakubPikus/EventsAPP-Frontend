@@ -1,22 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Dashboard from "../../components/Dashboard";
-import { useDispatch, useSelector } from "react-redux";
 import { RotatingLines } from "react-loader-spinner";
 import { useNavigate, useParams } from "react-router-dom";
-import { Scrollbars } from "react-custom-scrollbars-2";
-import Datepicker from "react-tailwindcss-datepicker";
-import {
-  ShoppingCartIcon,
-  MinusIcon,
-  PlusIcon,
-  TrashIcon,
-  CreditCardIcon,
-  PencilAltIcon,
-} from "@heroicons/react/solid";
+import { ShoppingCartIcon } from "@heroicons/react/solid";
 import moment from "moment";
 import "moment/locale/pl";
-import { getUser } from "../../selectors";
-import { ticket_pay } from "../../actions/data";
 import useEventTicketsPage from "../../hooks/useEventTicketsPage";
 moment.locale("pl");
 
@@ -30,8 +18,6 @@ function EventTicketsPage({
   endProvider,
 }) {
   const history = useNavigate();
-  const dispatch = useDispatch();
-  const user = useSelector(getUser);
 
   const [
     renderCategory,

@@ -99,7 +99,7 @@ function Contact({ menuStatus, contactStatus }) {
         <div className="flex h-full w-1/5 items-center justify-center">
           <img
             src={`${ips_config.BACKEND}${data.image_thumbnail}`}
-            className={`h-8 w-8 rounded-full`}
+            className={`h-8 w-8 rounded-full object-cover`}
           ></img>
         </div>
 
@@ -271,7 +271,7 @@ function Contact({ menuStatus, contactStatus }) {
         >
           <img
             src={`${ips_config.BACKEND}${data.image_thumbnail}`}
-            className={`h-8 w-8 rounded-full`}
+            className={`h-8 w-8 rounded-full object-cover`}
           ></img>
           <span className={`text-md h-auto font-mukta text-gray-200`}>
             {data.username}

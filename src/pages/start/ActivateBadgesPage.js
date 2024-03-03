@@ -145,8 +145,7 @@ function ActivateBadgesPage({ endProvider, badges }) {
         4: "",
       });
     }
-  }, [badges.not_valid_code_badge.badge?.code]); // tutaj trzeba dodać kod, bo przy dwukrotym odblokowaniu tej samej odznaki z roznymi kodami, nie bedzie sie aktywowalo bo odznaka nie bedzie sie zmieniac
-
+  }, [badges.not_valid_code_badge.badge?.code]);
   return (
     <Dashboard>
       <div

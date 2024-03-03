@@ -567,7 +567,7 @@ function DashboardPage({
                 >
                   <img
                     src={`${ips_config.BACKEND}${data.image_thumbnail}`}
-                    className="h-10 w-10 rounded-full transition ease-in-out group-hover:scale-110 xl:h-11 xl:w-11 2xl:h-12 2xl:w-12"
+                    className="h-10 w-10 rounded-full object-cover transition ease-in-out group-hover:scale-110 xl:h-11 xl:w-11 2xl:h-12 2xl:w-12"
                   ></img>
                 </Link>
                 <Link
@@ -880,7 +880,7 @@ function DashboardPage({
             <div className="flex flex-col items-center space-y-1 py-4 md:space-y-3">
               <img
                 src={`${ips_config.BACKEND}${data.image}`}
-                className="h-12 w-12 rounded-full md:h-16 md:w-16"
+                className="h-12 w-12 object-cover rounded-full md:h-16 md:w-16"
               ></img>
               <span className="break-anywhere p-2 text-center font-mukta text-sm text-gray-100">
                 {data.name}
@@ -1005,7 +1005,7 @@ function DashboardPage({
               >
                 <img
                   src={`${ips_config.BACKEND}/media/${data.user_image}`}
-                  className="h-10 w-10 rounded-full transition ease-in-out group-hover:scale-110 md:h-12 md:w-12"
+                  className="h-10 w-10 rounded-full object-cover transition ease-in-out group-hover:scale-110 md:h-12 md:w-12"
                 ></img>
               </Link>
               <Link
@@ -1075,7 +1075,7 @@ function DashboardPage({
             <div className="flex flex-col items-center space-y-3">
               <img
                 src={`${ips_config.BACKEND}${openModalActions.data.image}`}
-                className="h-32 w-32 rounded-full"
+                className="h-32 object-cover w-32 rounded-full"
               ></img>
               <span className="break-anywhere p-2 text-center font-mukta text-base text-gray-100 md:text-lg">
                 {openModalActions.data.name}
@@ -1409,7 +1409,7 @@ function DashboardPage({
             <div className="flex h-1/2 w-full shrink-0 flex-row items-center justify-center md:h-1/2 md:w-16 md:flex-col xl:w-24 xl:space-y-2">
               <img
                 src={`${ips_config.BACKEND}${data.image}`}
-                className="h-8 w-8 shrink-0 rounded-full md:h-12 md:w-12 xl:h-16 xl:w-16"
+                className="h-8 w-8 shrink-0 object-cover rounded-full md:h-12 md:w-12 xl:h-16 xl:w-16"
               ></img>
               <span className="break-anywhere p-2 text-center font-mukta text-[10px] text-gray-100 xl:text-sm">
                 {data.name}
@@ -1480,7 +1480,7 @@ function DashboardPage({
             >
               <img
                 src={`${ips_config.BACKEND}/media/${data.user_image}`}
-                className="h-9 w-9 rounded-full transition ease-in-out group-hover:scale-110 sm:h-10 sm:w-10 xl:h-12 xl:w-12"
+                className="h-9 w-9 rounded-full object-cover transition ease-in-out group-hover:scale-110 sm:h-10 sm:w-10 xl:h-12 xl:w-12"
               ></img>
             </Link>
             <Link
@@ -1588,7 +1588,7 @@ function DashboardPage({
           >
             <img
               src={`${ips_config.BACKEND}/media/${data.user_image}`}
-              className="h-8 w-8 rounded-full transition ease-in-out group-hover:scale-110"
+              className="h-8 w-8 rounded-full object-cover transition ease-in-out group-hover:scale-110"
             ></img>
           </Link>
           <Link
@@ -1985,7 +1985,7 @@ function DashboardPage({
               >
                 <img
                   src={`${ips_config.BACKEND}/media/${data.user_image}`}
-                  className="h-10 w-10 rounded-full transition ease-in-out group-hover:scale-110 md:h-12 md:w-12"
+                  className="h-10 w-10 rounded-full object-cover transition ease-in-out group-hover:scale-110 md:h-12 md:w-12"
                 ></img>
               </Link>
               <Link
@@ -2197,17 +2197,19 @@ function DashboardPage({
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center w-1/2 space-y-8">
-                <span className="break-anywhere p-2 text-center font-mukta text-[12px] text-gray-100 md:text-lg">
+                <span className="break-anywhere p-2 text-center font-mukta text-[12px] text-gray-100 md:text-base">
                   {`Kwota do przelania: ${openModalActions.data.price} zł`}
                 </span>
 
-                <span className="break-anywhere p-2 text-center font-mukta text-[12px] text-gray-100 md:text-lg">
-                  {`Tytuł: ${openModalActions.data.title} (ROZLICZENIE)`}
+                <span className="break-anywhere p-2 text-center font-mukta text-[12px] text-gray-100 md:text-base">
+                  {`Tytuł: ${openModalActions.data.title} ${
+                    objects == "tickets" ? "(ZWROT BILETÓW)" : "(ROZLICZENIE)"
+                  }`}
                 </span>
 
                 {openModalActions.data.payment_information?.bank_number !==
                   undefined && (
-                  <span className="break-anywhere p-2 text-center font-mukta text-[12px] text-gray-100 md:text-lg">
+                  <span className="break-anywhere p-2 text-center font-mukta text-[12px] text-gray-100 md:text-base">
                     {`Nr konta bankowego: ${openModalActions.data.payment_information.bank_number.replace(
                       /(.{2})(.{2})/g,
                       "$1 $2"
@@ -2317,7 +2319,7 @@ function DashboardPage({
           >
             <img
               src={`${ips_config.BACKEND}/media/${data.user_image}`}
-              className="h-7 w-7 rounded-full transition ease-in-out group-hover:scale-110 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 xl:h-9 xl:w-9"
+              className="h-7 w-7 rounded-full object-cover transition ease-in-out group-hover:scale-110 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 xl:h-9 xl:w-9"
             ></img>
           </Link>
           <Link to={`/user/${data.user}`} className="flex w-auto items-center">

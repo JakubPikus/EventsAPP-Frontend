@@ -5,7 +5,6 @@ import { Scrollbars } from "react-custom-scrollbars-2";
 import Datepicker from "react-tailwindcss-datepicker";
 import { ticket_pay } from "../actions/data";
 import {
-  ShoppingCartIcon,
   MinusIcon,
   PlusIcon,
   TrashIcon,
@@ -21,8 +20,6 @@ function useEventTicketsPage() {
 
   const [quantityTickets, setQuantityTickets] = useState(0);
   const [blockedPay, setBlockedPay] = useState(false);
-
-  const user = useSelector(getUser);
 
   const handleValueDatepickerChange = (
     values,
@@ -390,6 +387,7 @@ function useEventTicketsPage() {
                 endDate: data.date_of_birth,
               }}
               popoverDirection="down"
+              startFrom={new Date("1998-01-01")}
               displayFormat={"DD.MM.YYYY"}
               placeholder={"Brak"}
               onChange={(e) =>

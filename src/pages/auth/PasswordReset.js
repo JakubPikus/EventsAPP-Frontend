@@ -94,14 +94,14 @@ function PasswordReset() {
             <div className="flex flex-col space-y-4 pb-5">
               <div className="flex flex-col space-y-1">
                 <label className="text-sm font-bold text-white" htmlFor="code">
-                  Kod autoryzującys
+                  Kod
                 </label>
                 <div className="flex w-full flex-row items-center justify-between">
                   <input
                     type="text"
                     autoComplete="off"
                     name="code"
-                    placeholder="Kod autoryzujący"
+                    placeholder="6-cyfrowy kod"
                     className="flex w-3/4 rounded-md text-sm"
                     onChange={handleInputChangeForm}
                     required
